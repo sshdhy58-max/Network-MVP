@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>شجرة القرار</title>
+
+    <!-- رابط CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tree.css') }}">
+</head>
+
+
+<body>
+
+    <!-- ====== الهيدر ====== -->
+    <header class="top-header">
+<div class="logo-title">
+        <a href="{{ url_for('home') }}" style="text-decoration: none; color: inherit;">
+
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+
+        <div>
+            <h1>الدرع الرقمي</h1>
+            <p>نظام التنبؤ الأمني الذكي</p>
+        </div>
+
+    </a>
+
+</div>
+
+        <div class="system-status">
+            <span class="green-dot"></span>
+            <span>النظام متصل</span>
+        </div>
+    </header>
+
+</div>
+
+    <!-- ====== عنوان الصفحة ====== -->
+    <section class="main-title">
+        <h2>شجرة القرار 🌳</h2>
+        <p class="section-desc">
+            يستخدم نموذج شجرة القرار (Decision Tree) لتصنيف الاتصالات الشبكية وكشف الهجمات السيبرانية.
+        </p>
+    </section>
+
+
+    <!-- ====== معلومات النموذج ====== -->
+    <section class="model-info">
+
+        <div class="info-box">
+            <span class="box-label">نوع النموذج</span>
+            <span class="box-badge green">Decision Tree Classifier</span>
+        </div>
+
+        <div class="info-box">
+            <span class="box-label">دقة النموذج</span>
+            <span class="box-badge orange">71.70%</span>
+        </div>
+
+        <div class="info-box">
+            <span class="box-label">بيانات التدريب</span>
+            <span class="box-badge blue">NSL-KDD</span>
+        </div>
+
+    </section>
+
+
+    <!-- ====== صورة الشجرة ====== -->
+    <section class="tree-image-container">
+        <img src="{{ url_for('static', filename='images/DecisionTree.png') }}" alt="Decision Tree">
+    </section>
+
+
+</body>
+</html>
+<!-- كيف تعمل شجرة القرار -->
+<section class="how-tree-works">
+    <h2 class="section-title">كيف تعمل شجرة القرار 🌿</h2>
+
+    <div class="step-box">
+        <div class="step-header">
+            <span class="step-number green">1</span>
+            <span class="step-title">استخراج الميزات</span>
+        </div>
+        <p class="step-desc">
+            يتم استخراج الميزات من حزم البيانات الشبكية مثل نوع البروتوكول، الخدمة المستخدمة، مدة الاتصال، وعدد البيانات المرسلة والمستقبلة.
+        </p>
+    </div>
+
+    <div class="step-box">
+        <div class="step-header">
+            <span class="step-number orange">2</span>
+            <span class="step-title">اتخاذ القرارات</span>
+        </div>
+        <p class="step-desc">
+            تتحرك البيانات عبر عقد الشجرة، وفي كل عقدة يتم اتخاذ قرار بناءً على قيمة معينة لتقسيم البيانات بطريقة يسهل قراءتها.
+        </p>
+    </div>
+
+    <div class="step-box">
+        <div class="step-header">
+            <span class="step-number blue">3</span>
+            <span class="step-title">الوصول إلى الأوراق</span>
+        </div>
+        <p class="step-desc">
+            تستمر العملية حتى الوصول إلى ورقة الشجرة (Leaf Node) والتي تمثل التصنيف النهائي: “آمن” (Normal) أو “هجوم” (Attack).
+        </p>
+    </div>
+
+    <div class="step-box">
+        <div class="step-header">
+            <span class="step-number purple">4</span>
+            <span class="step-title">إصدار التنبؤ</span>
+        </div>
+        <p class="step-desc">
+            يتم إصدار التنبؤ النهائي مع نسبة الثقة (Confidence Score) لتحديد مدى تأكد النموذج من القرار المتخذ.
+        </p>
+    </div>
+</section>
+<section class="tree-advanced">
+    <h2 class="feat-title">مميزات شجرة القرار</h2>
+
+    <div class="feat-card">
+        <div class="feat-number green">1</div>
+        <div class="feat-content">
+            <h3>سهولة الفهم والتفسير</h3>
+            <p>يمكن فهم مخرجات النموذج بسهولة من خلال تتبع المسارات في الشجرة.</p>
+        </div>
+    </div>
+
+    <div class="feat-card">
+        <div class="feat-number orange">2</div>
+        <div class="feat-content">
+            <h3>سرعة التنبؤ</h3>
+            <p>تنفيذ فوري بدون الحاجة لحسابات معقدة.</p>
+        </div>
+    </div>
+
+    <div class="feat-card">
+        <div class="feat-number purple">3</div>
+        <div class="feat-content">
+            <h3>عدم الحاجة لتطبيع البيانات</h3>
+            <p>لا تتأثر بحجم أو توزيع القيم.</p>
+        </div>
+    </div>
+
+    <div class="feat-card">
+        <div class="feat-number blue">4</div>
+        <div class="feat-content">
+            <h3>التعامل مع البيانات المختلطة</h3>
+            <p>تتعامل مع البيانات الرقمية والفئوية بكفاءة.</p>
+        </div>
+    </div>
+
+    <div class="feat-card">
+        <div class="feat-number red">5</div>
+        <div class="feat-content">
+            <h3>كشف الانماط المعقدة </h3>
+            <p>قادرة على اكتشاف العلاقات المعقدة بين الميزات المختلفة.</p>
+        </div>
+    </div>
+
+    <div class="feat-card">
+        <div class="feat-number pink">6</div>
+        <div class="feat-content">
+            <h3>قابلية التصور</h3>
+            <p>يمكن تصور الشجرة بصريًا لفهم آلية اتخاذ القرارات.</p>
+        </div>
+    </div>
+    </section>
+
+<div class="metric-card">
+    <div class="metric-value">71.70%</div>
+    <div class="metric-info">
+        <h3>Accuracy</h3>
+        <p>نسبة التنبؤات الصحيحة من إجمالي التنبؤات</p>
+    </div>
+</div>
+
+<div class="metric-card">
+    <div class="metric-value">97.38%</div>
+    <div class="metric-info">
+        <h3>Precision</h3>
+        <p>من الهجمات المكتشفة، كم كانت صحيحة فعلاً</p>
+    </div>
+</div>
+
+<div class="metric-card">
+    <div class="metric-value">89.70%</div>
+    <div class="metric-info">
+        <h3>Recall</h3>
+        <p>من الهجمات الفعلية، كم تم اكتشافها</p>
+    </div>
+</div>
+
+<div class="metric-card">
+    <div class="metric-value">93.34%</div>
+    <div class="metric-info">
+        <h3>F1-Score</h3>
+        <p>التوازن بين Precision و Recall</p>
+    </div>
+</div>
+
+
+<footer class="footer">
+    <div class="footer-box">
+
+        <div class="footer-col">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('check') }}">فحص الاتصال</a></li>
+                <li><a href="{{ url_for('dashboard') }}">لوحة التحكم</a></li>
+                <li><a href="{{ url_for('tree') }}">شجرة القرار</a></li>
+                <li><a href="{{ url_for('matrix') }}">مصـفـوفة الإلتباس</a></li>
+                <li><a href="{{ url_for('about') }}">عن المشروع</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>المصادر</h3>
+            <ul>
+                <li>NSL-KDD Dataset</li>
+                <li>Scikit-Learn Docs</li>
+                <li>Cybersecurity News</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>تواصل معنا</h3>
+            <ul>
+                <li>البريد الإلكتروني</li>
+                <li>الدعم الفني</li>
+            </ul>
+        </div>
+
+    </div>
+</footer>

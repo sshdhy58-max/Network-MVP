@@ -1,0 +1,450 @@
+body {
+    font-family: "Tajawal", sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 0 15px;
+    direction: rtl;
+}
+
+/* ------- الهيدر ------- */
+.top-header {
+    background: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #1ca36f;
+    font-weight: 900;
+}
+
+.logo-title p {
+    margin: 0;
+    margin-top: 4px;
+    color: #444;
+    font-weight: 400;
+}
+.top-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 25px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center; 
+    gap: 12px;
+}
+
+.logo-title img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #1ca36f;
+    font-weight: 900;
+}
+
+.logo-title p {
+    margin: 0;
+    margin-top: 3px;
+    color: #444;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.green-dot {
+    width: 10px;
+    height: 10px;
+    background: #1ca36f;
+    border-radius: 50%;
+}
+
+/* ------- العنوان ------- */
+
+.main-title {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.main-title h2 {
+    font-size: 25px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+.section-desc {
+    font-size: 15px;
+    color: #555;
+    width: 90%;
+    margin: auto;
+    line-height: 1.7;
+}
+
+/* ------- معلومات النموذج ------- */
+
+.model-info {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.info-box {
+    background: white;
+    padding: 18px;
+    border-radius: 14px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.07);
+    border: 1px solid #eee;
+}
+
+.box-label {
+    font-size: 15px;
+    color: #555;
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.box-badge {
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+.blue {
+    background: #96dcb9;
+    color: #040404;
+}
+
+.pink {
+    background: #dfc8b6;
+    color: #070707;
+}
+
+.green {
+    background: #d0d6e1;
+    color: #050505;
+}
+
+/* ------- صورة الشجرة ------- */
+
+.tree-image-container {
+    margin-top: 35px;
+    text-align: center;
+}
+
+.tree-image-container img {
+    width: 92%;
+    border-radius: 10px;
+    background: white;
+    padding: 10px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.05);
+}
+.how-tree-works {
+    margin: 40px auto;
+    max-width: 700px;
+}
+
+.section-title {
+    font-size: 28px;
+    font-weight: 900;
+    text-align: center;
+    color: #1ca36f;
+    margin-bottom: 25px;
+}
+
+.step-box {
+    background: #ffffff;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+.step-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.step-number {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.step-number.green { background: #95beae; }
+.step-number.orange { background: #ccc4bc; }
+.step-number.blue { background: #878c94; }
+.step-number.purple { background: #c9b9e3; }
+
+.step-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.step-desc {
+    font-size: 15px;
+    color: #444;
+    margin-right: 38px; /* نفس تنسيق الجوال */
+    line-height: 1.7;
+}
+.tree-advanced {
+    max-width: 900px;
+    margin: 40px auto;
+    direction: rtl;
+}
+
+.feat-title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 900;
+    color: #1ca36f;
+    margin-bottom: 25px;
+}
+
+.feat-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #ffffffcc;
+    border-radius: 14px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 3px 12px #00000015;
+    transition: .2s ease;
+}
+
+.feat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px #00000025;
+}
+
+.feat-number {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: #fff;
+    font-size: 18px;
+}
+
+.green { background: #b4dec5; }
+.orange { background: #e3c595; }
+.purple { background: #897790; }
+.blue { background: #b5cfe0; }
+.red { background: #a3837f; }
+.pink { background: #b59a85; }
+
+.feat-content h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: #333;
+}
+
+.feat-content p {
+    margin: 4px 0 0;
+    font-size: 15px;
+    color: #555;
+}
+.footer-links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-box {
+    background: #ffffff;
+    width: 90%;
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    color: #2e8b56;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #444;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #2e8b56;
+    font-weight: bold;
+}
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2d2d2d;
+    margin: 25px 0 15px;
+    text-align: right;
+}
+
+/* نفس شكل البوكسات الموجودة عندك */
+.feature-box {
+    background: #f7f7f7;
+    padding: 14px 18px;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+    border: 1px solid #e5e5e5;
+    direction: rtl;
+}
+
+.feature-label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #7a7a7a;
+    margin-bottom: 4px;
+    text-align: right;
+}
+
+.feature-desc {
+    margin: 0;
+    color: #333;
+    font-size: 16px;
+    text-align: right;
+}
+.metric-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;  /* يخلي الكلام يمين والنسبة يسار */
+    background: #f0e9e9;
+    border-radius: 15px;
+    padding: 18px 20px;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.metric-value {
+    font-size: 26px;         /* صغّرنا الحجم */
+    font-weight: 700;
+    color: #2ca34a;          /* أخضر جميل */
+    min-width: 90px;         /* تثبيت عرض بسيط */
+    text-align: left;        /* النسبة تبقى يسار */
+}
+
+.metric-info {
+    text-align: right;       /* الكلام على اليمين */
+}
+
+.metric-info h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.metric-info p {
+    margin: 2px 0 0 0;
+    color: #666;
+    font-size: 15px;
+}
+.footer {
+    width: 100%;
+    padding: 30px 0;
+    background: #bceabc;
+    border-radius: 30px 30px 0 0;
+
+}
+.footer-box {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.footer-col h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d6b38;
+    margin-bottom: 15px;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 8px;
+    color: #333;
+    font-size: 16px;
+}
+
+.footer-col ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+.footer-col ul li a:hover {
+    color: #1d6b38;
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+    .footer-box {
+        flex-direction: column;
+        text-align: right;
+    }
+}
+.title-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.mini-logo {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}

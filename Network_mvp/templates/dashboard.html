@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8" />
+    <title>لوحة التحكم | الدرع الرقمي</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+    <!-- ======= الهيدر ======= -->
+    <header class="top-header">
+    <div class="left-side">
+        <div class="logo-title">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="logo">
+            <div>
+            <h1 class="page-title">
+    <a href="{{ url_for('home') }}" style="text-decoration: none; color: inherit;">
+    الدرع الرقمي
+    </a>
+</h1>
+
+                <p>نظام التنبؤ الذكي للهجمات</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-side system-status">
+        <span class="green-dot"></span>
+        <span>النظام متصل</span>
+    </div>
+</header>
+    <main>
+
+        <!-- ======= عنوان الصفحة ======= -->
+        <section class="main-title">
+            <h2>لوحة التحكم والمراقبة</h2>
+            <p>تحليل بيانات NSL-KDD وأداء نموذج Decision Tree</p>
+            <span class="monitor-btn">Live Monitoring ●</span>
+        </section>
+
+        <!-- ======= الإحصائيات ======= -->
+        <section class="stats-cards">
+
+            <div class="card red">
+                <p class="label">الهجمات المكتشفة</p>
+                <h3>78,000+</h3>
+                <p>من أنواع مختلفة</p>
+            </div>
+
+            <div class="card green">
+                <p class="label">إجمالي الطلبات</p>
+                <h3>126,973</h3>
+                <p>من بيانات NSL-KDD</p>
+            </div>
+
+            <div class="card blue">
+                <p class="label">دقة النموذج</p>
+                <h3>71.70%</h3>
+                <p>Decision Tree</p>
+            </div>
+
+        </section>
+
+
+        <!-- ======= آخر التنبيهات الأمنية ======= -->
+        <section class="alerts-section">
+            <h2>آخر التنبيهات الأمنية</h2>
+
+            <div class="alert-card alert-red">
+                <div class="alert-info">
+                    <p><strong>Neptune Attack</strong></p>
+                    <p>IP: 192.168.1.101 • Port: 8080</p>
+                </div>
+                <span class="alert-time">منذ 5 دقائق</span>
+            </div>
+
+            <div class="alert-card alert-orange">
+                <div class="alert-info">
+                    <p><strong>Smurf Attack</strong></p>
+                    <p>IP: 192.168.1.102 • Port: 22</p>
+                </div>
+                <span class="alert-time">منذ 12 دقيقة</span>
+            </div>
+
+            <div class="alert-card alert-red">
+                <div class="alert-info">
+                    <p><strong>Back Attack</strong></p>
+                    <p>IP: 192.168.1.103 • Port: 443</p>
+                </div>
+                <span class="alert-time">منذ 18 دقيقة</span>
+            </div>
+
+            <div class="alert-card alert-green">
+                <div class="alert-info">
+                    <p><strong>Normal Traffic</strong></p>
+                    <p>IP: 192.168.1.104 • Port: 80</p>
+                </div>
+                <span class="alert-time">منذ 25 دقيقة</span>
+            </div>
+
+            <div class="alert-card alert-orange">
+                <div class="alert-info">
+                    <p><strong>Teardrop Attack</strong></p>
+                    <p>IP: 192.168.1.105 • Port: 3306</p>
+                </div>
+                <span class="alert-time">منذ 32 دقيقة</span>
+            </div>
+        </section>
+
+        <!-- ======= الرسوم البيانية ======= -->
+    <section class="charts-section">
+
+    <h2>نسبة أنواع الهجمات</h2>
+    <div class="chart-box">
+        <canvas id="attackChart"></canvas>
+    </div>
+
+    <h2>توزيع البروتوكولات</h2>
+    <div class="chart-box">
+        <canvas id="protocolChart"></canvas>
+            <!-- ====== الرسوم البيانية ====== -->
+<section class="charts-section">
+
+    </div>
+
+    <h2 class="chart-title">أفضل 10 خدمات</h2>
+    <div class="chart-box">
+        <canvas id="serviceChart"></canvas>
+    </div>
+
+</section>
+    </div>
+
+    </main>
+
+    <!-- ======= الفوتر ======= -->
+    <footer class="footer">
+    <div class="footer-box">
+
+        <div class="footer-col">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('check') }}">فحص الاتصال</a></li>
+                <li><a href="{{ url_for('dashboard') }}">لوحة التحكم</a></li>
+                <li><a href="{{ url_for('tree') }}">شجرة القرار</a></li>
+                <li><a href="{{ url_for('matrix') }}">مصـفـوفة الإلتباس</a></li>
+                <li><a href="{{ url_for('about') }}">عن المشروع</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>المصادر</h3>
+            <ul>
+                <li>NSL-KDD Dataset</li>
+                <li>Scikit-Learn Docs</li>
+                <li>Cybersecurity News</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>تواصل معنا</h3>
+            <ul>
+                <li>البريد الإلكتروني</li>
+                <li>الدعم الفني</li>
+            </ul>
+        </div>
+
+    </div>
+</footer>
+<script>
+    // نسبة أنواع الهجمات
+    new Chart(document.getElementById("attackChart"), {
+        type: "pie",
+        data: {
+            labels: ["DoS", "Probe", "R2L", "U2R"],
+            datasets: [{
+                data: [70, 20, 8, 2],
+                backgroundColor: ["#4CAF50", "#2196F3", "#FFC107", "#F44336"]
+            }]
+        }
+    });
+
+    // توزيع البروتوكولات
+    new Chart(document.getElementById("protocolChart"), {
+        type: "bar",
+        data: {
+            labels: ["TCP", "UDP", "ICMP"],
+            datasets: [{
+                label: "عدد الاتصالات",
+                data: [100000, 45000, 20000],
+                backgroundColor: "#2196F3"
+            }]
+        }
+    });
+
+    // أفضل 10 خدمات
+    new Chart(document.getElementById("serviceChart"), {
+        type: "bar",
+        data: {
+            labels: ["HTTP", "FTP", "SMTP", "TELNET", "IMAP"],
+            datasets: [{
+                label: "عدد الحزم",
+                data: [40000, 30000, 25000, 15000, 10000],
+                backgroundColor: "#4CAF50"
+            }]
+        },
+        options: {
+            indexAxis: "y"
+        }
+    });
+</script>

@@ -1,0 +1,144 @@
+/* ------- الهيدر ------- */
+.top-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 0;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo {
+    width: 55px;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: 800;
+    color: #1ca36f;
+}
+
+.logo-title p {
+    margin: 0;
+    font-size: 14px;
+    color: #707070;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.green-dot {
+    width: 10px;
+    height: 10px;
+    background: #1ca36f;
+    border-radius: 50%;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: "Cairo", sans-serif;
+    background: linear-gradient(to bottom,#f4fff9,#eef3ff);
+    direction: rtl;
+}
+
+.container{
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1{
+    text-align: center;
+    color:#0f1724;
+}
+
+.subtitle{
+    text-align:center;
+    color:#555;
+    margin-bottom: 25px;
+}
+body{
+    margin:0;
+    padding:0;
+    font-family: "Cairo", sans-serif;
+    background: linear-gradient(to bottom,#f4fff9,#eef3ff);
+    direction: rtl;
+}
+
+.matrix-container{
+    max-width: 950px;
+    margin: auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+body{
+    margin:0;
+    padding:0;
+    font-family: "Cairo", sans-serif;
+    background: linear-gradient(to bottom,#f4fff9,#eef3ff);
+    direction: rtl;
+}
+
+.main-box{
+    max-width:900px;
+    margin:50px auto;
+    background:#ffffff;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 12px 25px rgba(0,0,0,0.05);
+}
+
+.footer-links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-box {
+    background: #c9f9c6;
+    width: 90%;
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    color: #2e8b56;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #444;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #2e8b56;
+    font-weight: bold;
+}

@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>فحص الاتصال الفوري</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<header class="top-header">
+
+    <a href="{{ url_for('home') }}" class="logo-title-vertical" style="text-decoration:none;">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" class="main-logo">
+        <h1 class="site-name">الدرع الرقمي</h1>
+    </a>
+
+</header>
+
+<style>
+.logo-title-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.main-logo{
+    width: 60px;
+}
+
+.site-name{
+    margin: 0;
+    font-size: 22px;
+    font-weight: bold;
+    color: #0b5c3c;
+    text-align: center;
+}
+</style>
+
+<style>
+    .top-header {
+    background: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #1ca36f;
+    font-weight: 900;
+}
+
+.logo-title p {
+    margin: 0;
+    margin-top: 4px;
+    color: #444;
+    font-weight: 400;
+}
+.top-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 25px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center; 
+    gap: 12px;
+}
+
+.logo-title img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #1ca36f;
+    font-weight: 900;
+}
+
+.logo-title p {
+    margin: 0;
+    margin-top: 3px;
+    color: #444;
+}
+  body{
+    margin:0;
+    font-family: Tahoma, sans-serif;
+    background:#eef6f1;
+    color:#0f3a2f;
+  }
+
+  .container{
+    max-width:650px;
+    margin:auto;
+    padding:20px;
+  }
+
+  h2{
+    font-size:28px;
+    font-weight:bold;
+    color:#0b5c3c;
+    text-align:center;
+    margin-bottom:10px;
+  }
+
+  .desc{
+    text-align:center;
+    color:#596c64;
+    margin-bottom:25px;
+    font-size:14px;
+  }
+
+  .box{
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 6px 14px rgba(0,0,0,0.09);
+  }
+
+  label{
+    font-weight:bold;
+    margin:12px 0 4px;
+    display:block;
+  }
+
+  select, input{
+    width:100%;
+    padding:12px;
+    border-radius:10px;
+    border:1px solid #d9e8e1;
+  }
+
+  .btn{
+    width:100%;
+    padding:14px;
+    background:#1f7a3d;
+    color:white;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:15px;
+  }
+
+  .result-box{
+    margin-top:20px;
+    padding:15px;
+    border-radius:12px;
+    font-size:15px;
+    display:none;
+  }
+
+  .good{
+    background:#e2f6e8;
+    color:#0d6637;
+    border:1px solid #8cd3a5;
+  }
+
+  .bad{
+    background:#ffe4e4;
+    color:#a11818;
+    border:1px solid #f7a7a7;
+  }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h2>فحص الاتصال الفوري</h2>
+  <p class="desc">أدخل بيانات الاتصال وسيتم تحليلها مباشرة لمعرفة ما إذا كان الاتصال طبيعيًا أو يمثل تهديدًا.</p>
+
+  <div class="box">
+
+    <label>البروتوكول</label>
+    <select id="protocol">
+      <option>TCP</option>
+      <option>UDP</option>
+      <option>ICMP</option>
+    </select>
+
+    <label>الخدمة</label>
+    <select id="service">
+      <option>HTTP</option>
+      <option>SMTP</option>
+      <option>FTP</option>
+      <option>SSH</option>
+      <option>DNS</option>
+    </select>
+
+    <label>المدة (ثانية)</label>
+    <input type="number" id="duration" value="10">
+
+    <label>بايتات المصدر</label>
+    <input type="number" id="src_bytes" value="1200">
+
+    <label>بايتات الوجهة</label>
+    <input type="number" id="dst_bytes" value="600">
+
+    <label>(Flag) العلم</label>
+    <select id="flag">
+      <option>SF</option>
+      <option>S0</option>
+      <option>REJ</option>
+      <option>RSTR</option>
+    </select>
+
+    <button class="btn" onclick="predict()">فحص الاتصال</button>
+
+    <div id="result" class="result-box"></div>
+
+  </div>
+
+</div>
+
+<script>
+function predict() {
+  let protocol = document.getElementById("protocol").value;
+  let service = document.getElementById("service").value;
+  let duration = Number(document.getElementById("duration").value);
+  let src = Number(document.getElementById("src_bytes").value);
+  let dst = Number(document.getElementById("dst_bytes").value);
+  let flag = document.getElementById("flag").value;
+
+  let resultBox = document.getElementById("result");
+
+  // منطق الذكاء (محاكاة نموذج التنبؤ)
+  let isNormal = true;
+
+  if(duration > 300) isNormal = false;
+  if(src > 8000 || dst > 8000) isNormal = false;
+  if(flag !== "SF") isNormal = false;
+  if(protocol === "UDP" && src === 0) isNormal = false;
+
+  // إظهار النتيجة
+  if(isNormal){
+    resultBox.className = "result-box good";
+    resultBox.style.display = "block";
+    resultBox.innerHTML =
+      "✔ الاتصال طبيعي وآمن<br><br>" +
+      "المدة: " + duration + "<br>" +
+      "بايتات المصدر: " + src + "<br>" +
+      "بايتات الوجهة: " + dst + "<br>" +
+      "البروتوكول: " + protocol + "<br>" +
+      "الخدمة: " + service + "<br>" +
+      "العلم: " + flag;
+  } else {
+    resultBox.className = "result-box bad";
+    resultBox.style.display = "block";
+    resultBox.innerHTML =
+      "✘ تنبيه: الاتصال قد يمثل تهديدًا أو نشاطًا غير طبيعي<br><br>" +
+      "المدة: " + duration + "<br>" +
+      "بايتات المصدر: " + src + "<br>" +
+      "بايتات الوجهة: " + dst + "<br>" +
+      "البروتوكول: " + protocol + "<br>" +
+      "الخدمة: " + service + "<br>" +
+      "العلم: " + flag;
+  }
+}
+</script>
+
+</body>
+</html>

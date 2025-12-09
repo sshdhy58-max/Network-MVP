@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>الدرع الرقمي | التنبؤ الأمني</title>
+
+    <!-- خط Tajawal -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+    <!-- ربط CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <!-- الهيدر -->
+    <header class="navbar">
+    <div class="nav-right">
+        <img class="logo-icon" src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo">
+        <span class="logo-text">الدرع الرقمي</span>
+    </div>
+
+    <nav class="nav-links">
+        <a href="/">الرئيسية</a>
+        <a href="/dashboard">لوحة التحكم</a>
+        <a href="/tree">شجرة القرار</a>
+        <a href="/matrix">مصفوفة الالتباس</a>
+        <a href="/about">عن المشروع</a>
+    </nav>
+</header>
+    <!-- حالة النظام -->
+    <div class="system-status">
+        <span class="dot"></span>
+        النظام متصل
+    </div>
+
+    <!-- الهيرو -->
+    <section class="hero">
+        <h1>الذكاء الاصطناعي<br>والتنبؤ الأمني</h1>
+        <p>
+        نظام ذكي يعتمد على خوارزميات شجرة القرار لتحليل حركة الشبكة وكشف الهجمات قبل حدوثها لحماية بياناتك.
+        </p>
+
+        <div class="hero-buttons">
+        <a href="/check" class="btn-main">ابدأ الفحص الآن ←</a>
+        <a href="/about" class="btn-outline">تعرّف على المزيد</a>
+        </div>
+    </section>
+
+    <!-- الصورة -->
+    <section class="hero-image">
+        <img src="{{ url_for('static', filename='images/hero-logo.png') }}" alt="Shield">
+    </section>
+
+    <!-- لماذا الدرع الرقمي؟ -->
+    <section class="why">
+        <h2>لماذا الدرع الرقمي؟</h2>
+        <p>
+        حلول متكاملة لمواجهة التهديدات الأمنية الحديثة باستخدام أحدث تقنيات الذكاء الاصطناعي.
+        </p>
+
+    <section class="features-section">
+    <div class="features-box">
+        <h3>حماية استباقية</h3>
+        <p>منع الهجمات قبل وصولها باستخدام تقنيات التحليل الفوري.</p>
+    </div>
+
+    <div class="features-box">
+        <h3>ذكاء اصطناعي</h3>
+        <p>نماذج تعلم آلي متقدمة لتحليل الأنماط المشبوهة.</p>
+    </div>
+
+    <div class="features-box">
+        <h3>استجابة فورية</h3>
+        <p>معالجة البيانات في الوقت الفعلي واتخاذ إجراءات فورية.</p>
+    </div>
+</section>
+
+<section class="system-intro">
+    <div class="title-with-icon">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" class="mini-logo" alt="logo">
+        <h2 class="section-title">الدرع الرقمي</h2>
+    </div>
+
+    <p class="system-text">
+        نظام ذكي للتنبؤ بالهجمات السيبرانية وحماية الشبكات باستخدام تقنيات الذكاء الاصطناعي وشجرة القرار.
+    </p>
+</section>
+
+<footer class="footer">
+    <div class="footer-box">
+
+        <div class="footer-col">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('check') }}">فحص الاتصال</a></li>
+                <li><a href="{{ url_for('dashboard') }}">لوحة التحكم</a></li>
+                <li><a href="{{ url_for('tree') }}">شجرة القرار</a></li>
+                <li><a href="{{ url_for('matrix') }}">مصـفـوفة الإلتباس</a></li>
+                <li><a href="{{ url_for('about') }}">عن المشروع</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>المصادر</h3>
+            <ul>
+                <li>NSL-KDD Dataset</li>
+                <li>Scikit-Learn Docs</li>
+                <li>Cybersecurity News</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>تواصل معنا</h3>
+            <ul>
+                <li>البريد الإلكتروني</li>
+                <li>الدعم الفني</li>
+            </ul>
+        </div>
+
+    </div>
+</footer>

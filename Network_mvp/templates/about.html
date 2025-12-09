@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title> عن المشروع | الدرع الرقمي</title>
+
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+</head>
+<body>
+        <!-- ====== الهيدر ====== -->
+    <header class="top-header">
+<a href="{{ url_for('home') }}" class="logo-title" style="text-decoration:none; color:inherit; display:flex; align-items:center; gap:10px;">
+    <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" style="height:42px;">
+    <div>
+        <h1 style="margin:0; font-size:22px; color:#0b5c3c;">الدرع الرقمي</h1>
+        <p style="margin:0; color:#707070; font-size:13px;">نظام التنبؤ الأمني الذكي</p>
+    </div>
+</a>
+        <div class="system-status">
+            <span class="green-dot"></span>
+            <span>النظام متصل</span>
+        </div>
+    </header>
+<style>
+/* بطاقة عضو */
+.member-card{
+  background:#ffffff;
+  margin:15px auto;
+  width:90%;
+  max-width:780px;
+  padding:20px;
+  border-radius:16px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* الاسم */
+.member-name{
+  font-size:22px;
+  font-weight:bold;
+  color:#0b3d2e;
+  margin:0;
+}
+
+/* الوظيفة */
+.member-role{
+  color:#6f7f78;
+  font-size:15px;
+  margin-top:6px;
+}
+
+/* الأيقونة */
+.member-icon{
+  width:55px;
+  height:55px;
+  border-radius:50%;
+  background:#e6f7ec;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+  color:#0b5c3c;
+}
+</style>
+
+
+<!-- بطاقة 1 -->
+<div class="member-card">
+  <div>
+    <h3 class="member-name">شذا طالع عسيري</h3>
+    <div class="member-role">أمن شبكات</div>
+  </div>
+
+  <div class="member-icon">👤</div>
+</div>
+
+<!-- بطاقة 2 -->
+<div class="member-card">
+  <div>
+    <h3 class="member-name">غلا محمد عسيري</h3>
+    <div class="member-role">محلل بيانات</div>
+  </div>
+
+  <div class="member-icon">👤</div>
+</div>
+</div>
+<footer class="footer">
+    <div class="footer-box">
+
+        <div class="footer-col">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('check') }}">فحص الاتصال</a></li>
+                <li><a href="{{ url_for('dashboard') }}">لوحة التحكم</a></li>
+                <li><a href="{{ url_for('tree') }}">شجرة القرار</a></li>
+                <li><a href="{{ url_for('matrix') }}">مصـفـوفة الإلتباس</a></li>
+                <li><a href="{{ url_for('about') }}">عن المشروع</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>المصادر</h3>
+            <ul>
+                <li>NSL-KDD Dataset</li>
+                <li>Scikit-Learn Docs</li>
+                <li>Cybersecurity News</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>تواصل معنا</h3>
+            <ul>
+                <li>البريد الإلكتروني</li>
+                <li>الدعم الفني</li>
+            </ul>
+        </div>
+
+    </div>
+</footer>

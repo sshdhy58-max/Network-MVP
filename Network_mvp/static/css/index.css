@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    font-family: 'Tajawal', sans-serif;
+    background: #f7f7f7;
+    color: #222;
+}
+
+/* شريط النظام */
+.system-status {
+    background: #e8f5e9;
+    padding: 12px 25px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #016b45;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background: #1ecb66;
+    border-radius: 50%;
+}
+
+/* النافبار */
+.navbar {
+    background: #ffffff;
+    padding: 20px 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #0f8f4f;
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.nav-logo img {
+    width: 35px;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.15));
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    white-space: nowrap;
+}
+
+.nav-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #0f8f4f;
+}
+
+/* الهيرو */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    font-weight: 800;
+    color: #0f8f4f;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    max-width: 650px;
+    margin: 0 auto 30px auto;
+    font-size: 20px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+/* أزرار الهيرو */
+.btn-primary {
+    background: #0f8f4f;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn-primary:hover {
+    background: #0c6c3b;
+}
+
+.btn-secondary {
+    border: 2px solid #0f8f4f;
+    color: #2c6046;
+    padding: 14px 28px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.btn-secondary:hover {
+    background: #ebf9ec;
+}
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 40px;
+    background: white;
+    border-radius: 20px;
+    gap: 40px;
+}
+
+.hero-right {
+    width: 60%;
+}
+
+.main-title {
+    color: #2e7d32;   /* أخضر محترم */
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-desc {
+    color: #555;
+    line-height: 1.8;
+}
+
+.hero-left {
+    width: 35%;
+}
+
+.quick-title,
+.sources-title {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.quick-links li,
+.sources-list li {
+    list-style: none;
+    margin-bottom: 6px;
+}
+
+.quick-links a {
+    color: #2e7d32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.quick-links a:hover {
+    text-decoration: underline;
+} 
+.footer-links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-box {
+    background: #ffffff;
+    width: 90%;
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    color: #2e8b56;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #444;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #2e8b56;
+    font-weight: bold;
+}

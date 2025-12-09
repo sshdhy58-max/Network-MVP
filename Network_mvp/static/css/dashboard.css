@@ -1,0 +1,285 @@
+/* الخط */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Cairo", sans-serif;
+    background: #f7f4f4;
+    color: #222;
+}
+
+/* ========== الهيدر ========== */
+.top-header {
+    background: #ffffff;
+    padding: 20px 40px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #1ca36f;
+    font-weight: 900;
+}
+
+.logo-title p {
+    margin: 0;
+    margin-top: 4px;
+    color: #444;
+    font-weight: 400;
+}
+.top-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 15px 25px;
+}
+
+.logo-title {
+    display: flex;
+    align-items: center; 
+    gap: 12px;
+}
+
+.logo-title img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.logo-title h1 {
+    margin: 0;
+    font-size: 28px;
+    color: #1ca36f;
+    font-weight: 900;
+}
+
+.logo-title p {
+    margin: 0;
+    margin-top: 3px;
+    color: #444;
+}
+
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.green-dot {
+    width: 12px;
+    height: 12px;
+    background: #1ca36f;
+    border-radius: 50%;
+}
+.system-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.green-dot {
+    width: 12px;
+    height: 12px;
+    background: #1ca36f;
+    border-radius: 50%;
+}
+
+/* ========== العنوان الرئيسي ========== */
+.main-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.main-title h2 {
+    font-size: 34px;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+.main-title p {
+    color: #666;
+    margin-top: -5px;
+}
+
+.monitor-btn {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    background: #d5f5e3;
+    color: #1ca36f;
+    font-weight: 600;
+}
+
+/* ========== بطاقات الإحصائيات ========== */
+.stats-cards {
+    margin: 40px auto;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    flex: 1;
+    min-width: 260px;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.card .label {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card h3 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 900;
+}
+
+.card.red { border-top: 6px solid #d63031; }
+.card.green { border-top: 6px solid #1ca36f; }
+.card.blue { border-top: 6px solid #2980b9; }
+
+/* ========== قسم التنبيهات ========== */
+.alerts-section {
+    width: 85%;
+    margin: 40px auto;
+}
+
+.alerts-section h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
+}
+
+.alert-card {
+    background: white;
+    padding: 18px 22px;
+    border-radius: 15px;
+    margin-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+.alert-info p {
+    margin: 0;
+    line-height: 1.3;
+}
+
+.alert-time {
+    color: #666;
+}
+
+/* ألوان التنبيهات + خلفية ملونة شبه شفافة */
+.alert-red {
+    background: #ffe5e5;
+    border-right: 6px solid #d63031;
+}
+
+.alert-orange {
+    background: #fff3da;
+    border-right: 6px solid #f39c12;
+}
+
+.alert-green {
+    background: #e8f8ef;
+    border-right: 6px solid #1ca36f;
+}
+
+/* ========== الرسوم البيانية ========== */
+.chart-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.chart-box canvas {
+    width: 100% !important;
+    height: 300px !important;
+}
+
+canvas {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: auto;
+}
+
+/* ========== الفوتر ========== */
+.footer-links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-box {
+    background: #ffffff;
+    width: 90%;
+    max-width: 1100px;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 3px 12px rgba(0,0,0,0.08);
+    display: flex;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    color: #2e8b56;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column a {
+    color: #444;
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    color: #2e8b56;
+    font-weight: bold;
+}
+.footer {
+    width: 100%;
+    padding: 30px 0;
+    background: #bceabc;
+    border-radius: 30px 30px 0 0;
+}
+
+.footer-box {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    padding: 0 20px;
+}

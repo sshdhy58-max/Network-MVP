@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>مصفوفة الالتباس | الدرع الرقمي</title>
+
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/matrix.css') }}">
+</head>
+<body>
+    <!-- ====== الهيدر ====== -->
+ <header class="top-header">
+
+    <div class="logo-title">
+
+        <!-- اللوقو -->
+        <a href="{{ url_for('home') }}" style="text-decoration:none; color:inherit;">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" alt="logo">
+        </a>
+
+        <!-- العنوان + الوصف -->
+        <div>
+            <h1 style="margin:0;">
+                <a href="{{ url_for('home') }}" style="text-decoration:none; color:#1ca36f;">
+                    الدرع الرقمي
+                </a>
+            </h1>
+            <p style="margin:0; color:#707070;">نظام التنبؤ الأمني الذكي</p>
+        </div>
+
+    </div>
+
+    <!-- حالة النظام -->
+    <div class="system-status">
+        <span class="green-dot"></span>
+        <span>النظام متصل</span>
+    </div>
+
+</header>
+
+
+<div class="matrix-header">
+    <div class="matrix-title-row">
+        <div class="matrix-title-row">
+
+    <span class="matrix-icon">
+        <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#1a8f3d" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="3" width="7" height="7" rx="1"></rect>
+            <rect x="14" y="14" width="7" height="7" rx="1"></rect>
+            <rect x="3"  y="14" width="7" height="7" rx="1"></rect>
+        </svg>
+    </span>
+
+    <h1 class="matrix-title">مصفوفة الالتباس</h1>
+
+</div>
+    </div>
+
+    <p class="matrix-subtitle">
+        عرض مفصل لأداء نموذج Decision Tree في تصنيف جميع أنواع الهجمات والاتصالات الآمنة
+    </p>
+</div>
+
+
+<div class="matrix-container">
+
+<div class="matrix-section-box">
+    
+    <h2 class="matrix-title">
+        مصفوفة الالتباس التفصيلية (22 نوع هجوم)
+    </h2>
+
+    <div class="matrix-image-wrapper">
+        <img src="{{ url_for('static', filename='images/matrix.png') }}" alt="Confusion Matrix">
+    </div>
+
+    <p class="matrix-description">
+        المحور الأفقي (Predicted): التصنيفات التي يتوقعها النموذج  
+        <br>
+        المحور العمودي (Actual): التصنيفات الفعلية  
+        <br>
+        الألوان الداكنة تمثل قيم أعلى (تنبؤات أكثر دقة)
+    </p>
+
+</div>
+
+</body>
+</html>
+
+
+<div class="attacks-section">
+
+    <h2 class="main-title">أنواع الهجمات الـ 22</h2>
+
+    <div class="outer-box">
+
+    
+<div class="attacks-wrapper">
+
+    <!-- DoS -->
+    <div class="attack-box dos-attack-box">
+        <h2 class="section-title">هجمات DoS</h2>
+
+        <div class="attack-row dos">
+            <span class="name">neptune</span>
+            <span class="count">41,214</span>
+        </div>
+
+        <div class="attack-row dos">
+            <span class="name">smurf</span>
+            <span class="count">2,807</span>
+        </div>
+
+        <div class="attack-row dos">
+            <span class="name">back</span>
+            <span class="count">2,203</span>
+        </div>
+
+        <div class="attack-row dos">
+            <span class="name">teardrop</span>
+            <span class="count">979</span>
+        </div>
+
+        <div class="attack-row dos">
+            <span class="name">pod</span>
+            <span class="count">264</span>
+        </div>
+
+        <div class="attack-row dos">
+            <span class="name">land</span>
+            <span class="count">21</span>
+        </div>
+    </div>
+
+    <!-- Probe -->
+    <div class="attack-box probe-attack-box">
+        <h2 class="section-title">هجمات Probe</h2>
+
+        <div class="attack-row probe">
+            <span class="name">satan</span>
+            <span class="count">1,589</span>
+        </div>
+
+        <div class="attack-row probe">
+            <span class="name">ipsweep</span>
+            <span class="count">1,247</span>
+        </div>
+
+        <div class="attack-row probe">
+            <span class="name">nmap</span>
+            <span class="count">231</span>
+        </div>
+
+        <div class="attack-row probe">
+            <span class="name">portsweep</span>
+            <span class="count">354</span>
+        </div>
+    </div>
+
+    <!-- R2L -->
+    <div class="attack-box r2l-attack-box">
+        <h2 class="section-title">هجمات R2L</h2>
+
+        <div class="attack-row r2l">
+            <span class="name">warezclient</span>
+            <span class="count">1,020</span>
+        </div>
+
+        <div class="attack-row r2l">
+            <span class="name">warezmaster</span>
+            <span class="count">20</span>
+        </div>
+
+        <div class="attack-row r2l">
+            <span class="name">guess_passwd</span>
+            <span class="count">53</span>
+        </div>
+
+        <div class="attack-row r2l">
+            <span class="name">ftp_write</span>
+            <span class="count">8</span>
+        </div>
+
+        <div class="attack-row r2l">
+            <span class="name">multihop</span>
+            <span class="count">7</span>
+        </div>
+
+        <div class="attack-row r2l">
+            <span class="name">imap4</span>
+            <span class="count">12</span>
+        </div>
+
+        <div class="attack-row r2l">
+            <span class="name">phf</span>
+            <span class="count">4</span>
+        </div>
+
+        <div class="attack-row r2l">
+            <span class="name">spy</span>
+            <span class="count">2</span>
+        </div>
+    </div>
+
+    <!-- U2R -->
+    <div class="attack-box u2r-attack-box">
+        <h2 class="section-title">هجمات U2R</h2>
+
+        <div class="attack-row u2r">
+            <span class="name">buffer_overflow</span>
+            <span class="count">30</span>
+        </div>
+
+        <div class="attack-row u2r">
+            <span class="name">loadmodule</span>
+            <span class="count">9</span>
+        </div>
+
+        <div class="attack-row u2r">
+            <span class="name">perl</span>
+            <span class="count">3</span>
+        </div>
+
+        <div class="attack-row u2r">
+            <span class="name">rootkit</span>
+            <span class="count">10</span>
+        </div>
+    </div>
+
+</div>
+
+<h2 class="main-title">تصنيفات الهجمات</h2>
+
+<div class="dos-box">
+
+    <!-- ======= DoS Box ======= -->
+<div class="attack-box dos">
+    <div class="attack-header">
+        <h3>DoS (Denial of Service)</h3>
+        <span class="dot red"></span>
+    </div>
+
+    <p class="attack-desc">
+        هجمات حرمان الخدمة التي تهدف إلى إغلاق الخدمة عن المستخدمين الشرعيين.
+    </p>
+
+    <p class="attack-examples">
+        <strong>أمثلة:</strong>
+        Neptune (41,214)، Smurf (2,807)، Back (2,203)
+    </p>
+</div>
+
+<!-- ======= Probe Box ======= -->
+<div class="attack-box probe">
+    <div class="attack-header">
+        <h3>Probe (Surveillance)</h3>
+        <span class="dot blue"></span>
+    </div>
+
+    <p class="attack-desc">
+        هجمات المراقبة والاستطلاع لجمع معلومات عن الشبكة والأنظمة.
+    </p>
+
+    <p class="attack-examples">
+        <strong>أمثلة:</strong> Satan (1,589)، IPSweep (1,247)، Nmap (231)
+    </p>
+</div>
+
+<!-- ======= R2L Box ======= -->
+<div class="attack-box r2l">
+    <div class="attack-header">
+        <h3>R2L (Remote to Local)</h3>
+        <span class="dot orange"></span>
+    </div>
+
+    <p class="attack-desc">
+        هجمات الوصول عن بعد للحصول على امتيازات محلية على النظام.
+    </p>
+
+    <p class="attack-examples">
+        <strong>أمثلة:</strong> WarezClient (1,020)، Guess_passwd (53)، FTP_write (8)
+    </p>
+</div>
+
+<!-- ======= U2R Box ======= -->
+<div class="attack-box u2r">
+    <div class="attack-header">
+        <h3>U2R (User to Root)</h3>
+        <span class="dot purple"></span>
+    </div>
+
+    <p class="attack-desc">
+        هجمات الترقية من مستخدم عادي إلى مسؤول النظام (Root).
+    </p>
+
+    <p class="attack-examples">
+        <strong>أمثلة:</strong> Buffer_overflow (30)، Rootkit (10)، Loadmodule (9)
+    </p>
+</div>
+
+<div class="summary-section">
+    <div class="summ-card">
+
+        <h2 class="summ-title">ملخص الأداء حسب فئة الهجوم</h2>
+
+        <!-- DoS -->
+        <div class="summ-item">
+            <div class="summ-right">
+                <span class="summ-dot red"></span>
+                <div>
+                    <p class="summ-name">DoS</p>
+                    <p class="summ-desc">أعلى دقة في الكشف</p>
+                </div>
+            </div>
+
+            <div class="summ-left">
+                <p class="summ-percent">100%</p>
+                <p class="summ-details">مكتشف: 41,214 | فاتت: 0</p>
+            </div>
+        </div>
+
+        <!-- Probe -->
+        <div class="summ-item">
+            <div class="summ-right">
+                <span class="summ-dot blue"></span>
+                <div>
+                    <p class="summ-name">Probe</p>
+                    <p class="summ-desc">دقة عالية جدًا</p>
+                </div>
+            </div>
+
+            <div class="summ-left">
+                <p class="summ-percent">98.2%</p>
+                <p class="summ-details">مكتشف: 2,807 | فاتت: 50</p>
+            </div>
+        </div>
+
+        <!-- R2L -->
+        <div class="summ-item">
+            <div class="summ-right">
+                <span class="summ-dot orange"></span>
+                <div>
+                    <p class="summ-name">R2L</p>
+                    <p class="summ-desc">دقة متوسطة</p>
+                </div>
+            </div>
+
+            <div class="summ-left">
+                <p class="summ-percent">56.3%</p>
+                <p class="summ-details">مكتشف: 1,589 | فاتت: 1,234</p>
+            </div>
+        </div>
+
+        <!-- U2R -->
+        <div class="summ-item">
+            <div class="summ-right">
+                <span class="summ-dot purple"></span>
+                <div>
+                    <p class="summ-name">U2R</p>
+                    <p class="summ-desc">أعلى دقة في الكشف</p>
+                </div>
+            </div>
+
+            <div class="summ-left">
+                <p class="summ-percent">100%</p>
+                <p class="summ-details">مكتشف: 1,247 | فاتت: 0</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+    <!-- DoS -->
+    
+<div class="insight-container">
+
+    <h2 class="insights-title">الرؤى الرئيسية</h2>
+
+    <div class="insight-row">
+        <span class="icon green"></span>
+        <p>
+            <strong>دقة عالية في DoS و U2R:</strong>
+            النموذج يكتشف هجمات DoS و U2R بدقة 100%.
+        </p>
+    </div>
+
+    <div class="insight-row">
+        <span class="icon green"></span>
+        <p>
+            <strong>دقة جيدة في Probe:</strong>
+            معدل اكتشاف 98.2% لهجمات المراقبة.
+        </p>
+    </div>
+
+    <div class="insight-row">
+        <span class="icon yellow"></span>
+        <p>
+            <strong>تحدي في R2L:</strong>
+            دقة 56.3% فقط – يحتاج تحسين في كشف هجمات الوصول عن بعد.
+        </p>
+    </div>
+
+    <div class="insight-row">
+        <span class="icon blue"></span>
+        <p>
+            <strong>توازن جيد:</strong>
+            يشير F1-Score 93.34% إلى توازن جيد بين Precision و Recall.
+        </p>
+    </div>
+
+</div>
+<footer class="footer">
+    <div class="footer-box">
+
+        <div class="footer-col">
+            <h3>روابط سريعة</h3>
+            <ul>
+                <li><a href="{{ url_for('home') }}">الرئيسية</a></li>
+                <li><a href="{{ url_for('check') }}">فحص الاتصال</a></li>
+                <li><a href="{{ url_for('dashboard') }}">لوحة التحكم</a></li>
+                <li><a href="{{ url_for('tree') }}">شجرة القرار</a></li>
+                <li><a href="{{ url_for('matrix') }}">مصـفـوفة الإلتباس</a></li>
+                <li><a href="{{ url_for('about') }}">عن المشروع</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>المصادر</h3>
+            <ul>
+                <li>NSL-KDD Dataset</li>
+                <li>Scikit-Learn Docs</li>
+                <li>Cybersecurity News</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h3>تواصل معنا</h3>
+            <ul>
+                <li>البريد الإلكتروني</li>
+                <li>الدعم الفني</li>
+            </ul>
+        </div>
+
+    </div>
+</footer>

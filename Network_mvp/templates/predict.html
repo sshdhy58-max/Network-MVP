@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>تنبؤ الهجمات</title>
+    <link rel="stylesheet" href="{{ url_for( 'static', filename='css/predict.css') }}">
+</head>
+<body>
+
+<header>
+  <img src="images/Logo.JPG" alt="Logo">
+  <h1>تنبؤ الهجمات</h1>
+</header>
+
+<div>
+  <p>أدخل بيانات الميزات للتنبؤ:</p>
+  <textarea id="featuresInput" rows="5" cols="60"></textarea><br>
+  <button id="predictBtn">تنبؤ</button>
+</div>
+
+<div>
+  <h2>النتيجة:</h2>
+  <p id="result"></p>
+</div>
+
+<script>
+const predictBtn = document.getElementById("predictBtn");
+predictBtn.onclick = async () => {
+  const featuresText = document.getElementById("featuresInput").value;
+  const features = featuresText.split(",").map(Number);
+  
+  const response = await fetch("http://127.0.0.1:5000/predict", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ features })
+  });
+
+  const data = await response.json();
+  document.getElementById("result").textContent = data.prediction;
+};
+</script>
+
+</body>
+</html>
